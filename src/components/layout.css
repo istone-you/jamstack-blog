@@ -126,7 +126,9 @@ p {
   padding: 0;
   margin-bottom: var(--space-4);
 }
-ul,
+ul {
+  list-style: none
+}
 ol {
   margin-left: var(--space-4);
   list-style-position: outside;

@@ -12,10 +12,10 @@
 }
 
 .listItem {
-  height: 132px;
+  height: 250px;
   list-style:none;
   position: relative;
-  padding: 20px;
+  padding: 40px;
   border: 2px solid black;
   border-radius: 10px;
   text-decoration: none;

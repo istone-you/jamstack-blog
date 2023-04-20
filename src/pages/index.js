@@ -3,17 +3,23 @@ import { graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import * as styles from "../components/index.module.css"
 
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <ul>
+    <div className={styles.list}>
       {data.allMicrocmsBlogs.edges.map(({ node }) => (
-        <li key={node.blogsId}>
-          <Link to={`/blog/${node.blogsId}`}>{node.title}</Link>
-        </li>
+        <Link to={`/blog/${node.blogsId}`} className={styles.listItem} key={node.blogsId}>
+          {node.eyecatch && (
+            <div className={styles.textCenter}>
+              <img src={node.eyecatch.url} alt={node.title} height="100px" />
+            </div>
+          )}
+          <p>{node.title}</p>
+        </Link>
       ))}
-    </ul>
+    </div>
   </Layout>
 )
 
@@ -27,6 +33,11 @@ export const query = graphql`
           blogsId
           title
           content
+          eyecatch {
+            height
+            url
+            width
+          }
         }
       }
     }
