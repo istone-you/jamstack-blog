@@ -14,10 +14,10 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `iStone's Blog`,
+    description: `iStone's Blog`,
+    author: `@istone-you`,
+    siteUrl: `https://blog.istoneyou.net/`,
   },
   plugins: [
     `gatsby-plugin-image`,

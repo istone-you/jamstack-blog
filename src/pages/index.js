@@ -21,7 +21,7 @@ export default IndexPage
 
 export const query = graphql`
   query {
-    allMicrocmsBlogs {
+    allMicrocmsBlogs(sort: {createdAt: DESC}) {
       edges {
         node {
           blogsId
